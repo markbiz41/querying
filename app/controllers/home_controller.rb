@@ -4,6 +4,11 @@ class HomeController < ApplicationController
     # Section 1.1
     # Returns clients with id 1 and 2
     clients = Client.find( [1, 2] )
+    client = Client.take
+    clients = Client.take(2)
+    first_client = Client.first
+    last_client = Client.last
+    client_1 = Client.find_by first_name: "Client 1"
 
     # Section 2
     # Returns clients orders count with 2
